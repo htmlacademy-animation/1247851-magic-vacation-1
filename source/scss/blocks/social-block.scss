@@ -35,6 +35,7 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
+    transition: all 0.3s;
   }
 
   svg {
@@ -89,6 +90,7 @@
   margin-top: 1.5rem;
   opacity: 0;
   pointer-events: none;
+  transition: all 0.3s;
 
   @media (min-width: $stop-scaling) {
     margin-top: 15px;
@@ -234,7 +236,6 @@
     svg {
       width: 1.7rem;
       height: 1rem;
-
       @media (min-width: $stop-scaling) {
         width: 10px;
         height: 10px;
