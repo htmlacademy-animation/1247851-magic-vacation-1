@@ -38,6 +38,13 @@
     transition: all 0.3s ease-in-out;
   }
 
+  body.loaded &:before {
+    transition: width 0.5s cubic-bezier(0.18, 1.85, 1, 0.82),
+      height 0.5s cubic-bezier(0.18, 1.85, 1, 0.82);
+    width: 100%;
+    height: 100%;
+  }
+
   svg {
     @include center;
     display: block;
@@ -58,7 +65,7 @@
     transition-delay: 0.2s;
   }
 
-  &:hover,
+  body.loaded &:hover,
   .social-block--active {
     color: $c-purple;
 

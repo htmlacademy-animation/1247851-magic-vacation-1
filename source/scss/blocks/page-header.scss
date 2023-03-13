@@ -39,6 +39,11 @@
   left: -20px;
   transition: all 0.5s ease-out;
 
+  body.loaded & {
+    opacity: 1;
+    left: 0;
+  }
+
   @media (min-width: $stop-scaling) {
     top: -5px;
     padding: 10px 0;
@@ -135,6 +140,10 @@
   align-items: center;
   opacity: 0;
   transition: all 0.8s ease;
+
+  body.loaded & {
+    opacity: 1;
+  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     position: fixed;
@@ -271,8 +280,9 @@
       }
     }
 
-    &.active {
+    body.loaded &.active {
       &::after {
+        left: 0;
         width: 100%;
       }
     }
