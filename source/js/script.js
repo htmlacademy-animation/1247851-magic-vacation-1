@@ -9,6 +9,7 @@ import form from "./modules/form.js";
 import social from "./modules/social.js";
 import FullPageScroll from "./modules/full-page-scroll";
 import base from "./modules/base";
+import {accentTypographyBuild} from "./modules/text-animation";
 
 // init modules
 mobileHeight();
@@ -22,3 +23,8 @@ social();
 base();
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
+
+accentTypographyBuild(`.intro__title`, 500, `transform`, 0);
+accentTypographyBuild(`.intro__date`, 500, `transform`, 700);
+accentTypographyBuild(`.slider__item-title`, 500, `transform`, 0);
+accentTypographyBuild(`.prizes__title`, 500, `transform`, 0);
